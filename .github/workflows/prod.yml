@@ -36,7 +36,7 @@ jobs:
         password: ${{ secrets.CR_PAT }}
 
     - name: Dotnet publish linux-arm64
-      run: dotnet publish VnEdge.csproj -c Release -o deploy -r linux-arm64 
+      run: dotnet publish ConsoleApp1.csproj -c Release -o deploy -r linux-arm64 
 
     - name: Push linux-arm64 to GitHub Container Registry
       uses: docker/build-push-action@v2
